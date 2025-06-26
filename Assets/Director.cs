@@ -15,12 +15,12 @@ public class Director : MonoBehaviour
 
     public void GameOver() {
         uiScript.ShowGameOver();
-        obstacleSpawner.DeleteObstancles();
         audioSource.Play();
     }
 
     public void RestartGame() {
         uiScript.ResetScore();
+        obstacleSpawner.DeleteObstancles();
         obstacleSpawner.Respawn();
     }
 }
